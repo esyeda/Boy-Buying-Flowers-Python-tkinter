@@ -9,7 +9,7 @@ class MyGUI:
         self.canvas.pack()
 
         self.current_picture_index = 0 
-        self.pictures = [self.maryam_picture1, self.zarmina_picture2, self.eshaal_picture3]
+        self.pictures = [self.picture1, self.picture2, self.eshaal_picture3]
 
         #button 
         self.next_button = tk.Button(self.main_window, text="Next", command=self.next_picture)
@@ -26,7 +26,7 @@ class MyGUI:
         self.current_picture_index = (self.current_picture_index + 1) % len(self.pictures)
         self.pictures[self.current_picture_index]()
 
-    def maryam_picture1(self):
+    def picture1(self):
         # Car
         self.canvas.create_polygon(60, 135, 90, 100, 210, 100, 240, 135, fill = "cyan")
         self.canvas.create_rectangle(30, 135, 275, 180, width = 0, fill = "yellow")
@@ -50,7 +50,7 @@ class MyGUI:
         self.canvas.create_oval(316, 80, 364, 128, fill= "purple" )
 
 
-    def zarmina_picture2(self):
+    def picture2(self):
         # Draw a simple store
         self.canvas.create_rectangle(300, 150, 350, 250, fill="brown")
         self.canvas.create_polygon(300, 150, 325, 100, 350, 150, fill="red")
